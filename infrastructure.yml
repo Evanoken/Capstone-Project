@@ -5,10 +5,12 @@ Parameters:
   VpcId:
     Type: AWS::EC2::VPC::Id
   SubnetIds:
-    Type: List<AWS::EC2::Subnet::Id>
+    Type: 'List<AWS::EC2::Subnet::Id>'
+  ImageUrl:
+    Type: String
+    Description: The URI of the ECR image
 
 Resources:
-
   MyECSCluster:
     Type: AWS::ECS::Cluster
     Properties:
@@ -46,12 +48,12 @@ Resources:
       RequiresCompatibilities:
         - FARGATE
       NetworkMode: awsvpc
-      Cpu: 256
-      Memory: 512
+      Cpu: '256'
+      Memory: '512'
       ExecutionRoleArn: !GetAtt ECSTaskExecutionRole.Arn
       ContainerDefinitions:
         - Name: webapp-container
-          Image: PLACEHOLDER_ECR_URI
+          Image: !Ref ImageUrl
           PortMappings:
             - ContainerPort: 80
 
