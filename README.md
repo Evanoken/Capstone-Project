@@ -71,11 +71,21 @@ Beyond the core requirements, this project implements advanced observability and
 * **Infrastructure Validation:** Verified the complete stack lifecycle, including successful stack creation and change-set execution via the AWS CLI.
 
 ### Additional Evidence
-* **Detailed Logs Insights:** `media/log-insights.png`
-* **Average Execution Duration:** `media/average-execution-duration.png`
-* **Health Alarms:** `media/LambdaErrorAlarm.png`
+### 4. Deep-Dive Logs Insights
+[cite_start]Evidence of detailed log analysis using CloudWatch Logs Insights to verify data capture and system behavior. [cite: 8]
+![Logs Insights](media/log-insights.png)
 
----
+### 5. Performance Benchmarking
+[cite_start]Analysis of the **Average Execution Duration** for the Lambda backend to ensure optimal latency and user experience. [cite: 9]
+![Average Execution Duration](media/average-execution-duration.png)
+
+### 6. Proactive Health Alarms
+[cite_start]Configuration of a `LambdaErrorAlarm` to monitor for system failures and ensure high availability. [cite: 10, 11]
+![Lambda Error Alarm](media/LambdaErrorAlarm.png)
+
+### 7. Notification System Verification
+Confirmation of the Amazon SNS subscription to ensure that automated health alerts are successfully delivered.
+![Subscription Confirmation](media/subscription-confirm.png)
 
 ## 🧹 Cleanup
 To avoid unnecessary AWS costs:
