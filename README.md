@@ -85,6 +85,10 @@ Configuration of a `LambdaErrorAlarm` to monitor for system failures and ensure 
 Confirmation of the Amazon SNS subscription to ensure that automated health alerts are successfully delivered.
 ![Subscription Confirmation](media/LambdaErrorAlarmv1.png)
 
+### 8. MAjor Errors
+Some of the major issues I faced during deployment
+![Errors Deploying](media/errors-deploying.png)
+
 ---
 
 ## 🧹 Cleanup
